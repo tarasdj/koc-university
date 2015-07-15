@@ -22,7 +22,7 @@ Legal information about Drupal:
  * Learn about the Drupal trademark and logo policy:
    http://drupal.com/trademark
 
-CONFIGURATION AND FEATURES
+
 --------------------------
 
 Drupal core (what you get when you download and extract a drupal-x.y.tar.gz or
@@ -34,7 +34,7 @@ site-specific configuration. In addition to the core modules, there are
 thousands of contributed modules (for functionality not included with Drupal
 core) available for download.
 
-More about configuration:
+
  * Install, upgrade, and maintain Drupal:
    See INSTALL.txt and UPGRADE.txt in the same directory as this document.
  * Learn about how to use Drupal to create your site:

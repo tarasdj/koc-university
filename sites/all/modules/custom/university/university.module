@@ -11,6 +11,14 @@ function university_menu(){
     'delivery callback' => 'ajax_deliver',
   );
 
+  $items['ajax/newsletter/path/%'] = array(
+    'page callback' => 'university_ajax_newsletter_callback',
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('get ajax'),
+    'delivery callback' => 'ajax_deliver',
+  );
+
   return $items;
 }
 
@@ -25,9 +33,16 @@ function university_ajax_callback($nid, $type = 'ajax'){
   return array('#type' => 'ajax', '#commands' => $commands);
 }
 
+function university_ajax_newsletter_callback($nid, $type = 'ajax'){
+  $_SESSION['ncvid'] = $nid;
+  $viewName = 'newsletter_view'; 
+  $view_html = views_embed_view($viewName, $display_id = 'default');
+  $commands[] = ajax_command_replace('.view-newsletter-view', $view_html);
+  return array('#type' => 'ajax', '#commands' => $commands);
+}
+
 /**
 *Implements hook_block_info
-*block view count on shopping card
 */
 function university_block_info() {
   
