@@ -1,0 +1,74 @@
+<?php
+/**
+ * @file
+ * Main module file.
+ *
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function views_ef_fieldset_views_api() {
+  return array(
+    'api' => 3.0,
+  );
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function views_ef_fieldset_form_views_exposed_form_alter(&$form, &$form_state) {
+  if (isset($form_state['display'])) {
+    $form['#view'] = $form_state['view'];
+    $form['#display'] = $form_state['display'];
+    $form['#post_render'][] = '_views_ef_fieldset_post_render';
+  }
+}
+
+/**
+ * Custom post render callback used in hook_form_form_id_alter().
+ */
+function _views_ef_fieldset_post_render($form_render, $form) {
+  $options = $form['#display']->display_options['views_ef_fieldset'];
+
+  if ($options['enabled']) {
+    $classes = array();
+
+    if ($options['options']['collapsible'] == TRUE) {
+      $classes[] = 'collapsible';
+      drupal_add_library('system', 'drupal.collapse');
+    }
+    if ($options['options']['collapsed'] == TRUE) {
+      $classes[] = 'collapsed';
+    }
+
+    $exposed_widgets = array(
+      '#type' => 'fieldset',
+      'exposed_widgets' => array(
+        '#markup' => $form_render
+      )
+    );
+
+    if (!empty($options['options']['title'])) {
+      $exposed_widgets += array(
+        '#title' => check_plain($options['options']['title']),
+      );
+    }
+
+    if (!empty($options['options']['description'])) {
+      $exposed_widgets += array(
+        '#description' => check_plain($options['options']['description']),
+      );
+    }
+
+    if (!empty($classes)) {
+      $exposed_widgets += array(
+        '#attributes' => array('class' => $classes)
+      );
+    }
+
+    return drupal_render($exposed_widgets);
+  }
+
+  return $form_render;
+}

@@ -1,0 +1,1 @@
+<a href="#" id="hide_show_search_button"><i class="fa fa-search"></i></a>

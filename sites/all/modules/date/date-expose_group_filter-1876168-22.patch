@@ -1,0 +1,19 @@
+Index: date/date_views/includes/date_views_filter_handler_simple.inc
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- date/date_views/includes/date_views_filter_handler_simple.inc	(revision f116c9d5f267a3b2843b552b2e0a117ed0fc4d92)
++++ date/date_views/includes/date_views_filter_handler_simple.inc	(revision )
+@@ -93,6 +93,11 @@
+       elseif (isset($this->options['expose']['identifier']) && !isset($_GET[$this->options['expose']['identifier']])) {
+         return str_replace(' ', 'T', $this->date_default_value($prefix));
+       }
++      elseif ($this->options['is_grouped'] && isset($_GET[$this->options['expose']['identifier']])) {
++        $identifier = $_GET[$this->options['expose']['identifier']];
++        $prefix = $this->options['group_info']['group_items'][$identifier][$prefix];
++        return str_replace(' ', 'T', $this->date_default_value($prefix));
++      }
+     }
+ 
+     return str_replace(' ', 'T', $input);

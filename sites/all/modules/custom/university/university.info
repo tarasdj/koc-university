@@ -1,0 +1,4 @@
+name = University Custom Module
+description = Module to allows custom code for university project
+package = KOC - University
+core = 7.x
