@@ -21,6 +21,7 @@
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
 

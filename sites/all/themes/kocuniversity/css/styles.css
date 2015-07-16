@@ -2101,9 +2101,11 @@ html{
 }
 
 .view-deans-messages-list .views-row {
-  width: 25%;
+  width: 23%;
   display: inline-block;
   margin-top: 30px;
+  text-align: center;
+  padding: 10px;
 } 
 
 .open-positions-top img,
@@ -2136,7 +2138,8 @@ html{
   background: #f5f5f5;
 }
 
-.view-curriculum-instructors > div div a {
+.view-curriculum-instructors > div div a,
+.view-deans-messages-list .views-field-title-1 a {
   color: #252525;
   font-size: 14px;
   text-decoration: none;
@@ -2151,7 +2154,8 @@ html{
   background: #f5f5f5;
 }
 
-.view-curriculum-instructors > div div a:hover{
+.view-curriculum-instructors > div div a:hover,
+.view-deans-messages-list .views-field-title-1 a:hover{
   color: #990000;
   text-decoration: underline;
 }
@@ -2181,7 +2185,8 @@ html{
   font-family: 'Graphik-Regular';
 }
 
-.newsletter-top-text{
+.newsletter-top-text, 
+.publication-baner{
   margin-top: 30px;
 }
 
@@ -2223,4 +2228,130 @@ html{
   font-family: 'Graphik-Regular';
   font-size: 18px;
   line-height: 23.20px;
+}
+
+.view-deans-messages-list .views-field-title a{
+  color: #990000;
+  font-family: 'GaramondPremrPro-Bd';
+  text-decoration: none;
+  line-height: 20.20px;
+}
+
+.view-deans-messages-list .views-row:hover{
+  background: #ECECEC;
+}
+
+.view-publications th {
+  text-align: left;
+  padding: 15px;
+}
+
+.view-publications td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20.20px;
+}
+
+.pane-publications h2{
+  color: #990000;
+  font-size: 24px;
+  font-family: 'Graphik-Bold';
+}
+
+.not-found {
+  margin: auto;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  text-align: center;
+  width: 379px;
+}
+
+.not-found span {
+  font-family: 'GaramondPremrPro';
+  font-size: 36px;
+  color: #990000;
+  line-height: 30px;
+}
+
+.not-found div {
+  margin-top: 60px;  
+}
+
+.not-found div a {
+  color: #c7c7c7;
+}
+
+.search-results > li > h3{
+  padding: 5px;
+  margin: 0px;
+}
+
+.search-results > li > h3 > a{
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Graphik-Bold';
+}
+
+.search-results > li {
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.search-snippet-info p {
+  margin: 0px;
+}
+
+.search-results li {
+  margin-bottom: 0px !important;
+  overflow: auto;
+}
+
+.search-info {
+  padding: 5px;
+  color: #c7c7c7;
+}
+
+.search-snippet-info {
+  width: 60%;
+  float: left;
+}
+
+.search-snippet-link {
+  width: 30%;
+  float: right; 
+}
+
+.search-results h3 {
+  margin: 0px;
+  font-size: 18px;
+  font-family: 'Graphik-Bold';
+}
+
+.search-snippet-link a{
+  color: #000;
+}
+
+.pager > li{
+  color: #c7c7c7;
+}
+
+.pager > li > a{
+  color: #000;
+}
+
+.search-results {
+  padding: 0px;
+}
+
+.search-results .search-snippet-info {
+  padding: 0px;
+}
+
+.page-search div > div > div > h2 {
+  color: #990000;
+  font-size: 24px;
+  font-family: 'Graphik-Bold';  
 }

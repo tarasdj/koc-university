@@ -46,15 +46,19 @@
  */
 ?>
 <li>
-  <h3 class="title">
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
-  </h3>
   <div class="search-snippet-info">
+  <h3 class="title">
+    <?php print $title; ?>
+  </h3>
     <?php if ($snippet) : ?>
       <p class="search-snippet"><?php print $snippet; ?></p>
     <?php endif; ?>
     <?php if ($info) : ?>
       <p class="search-info"><?php print $info; ?></p>
     <?php endif; ?>
+  </div>
+  <div class="search-snippet-link">
+  <h3 class="title">Page Link</h3>  
+    <a href="<?php print $url; ?>"><?php print $url; ?></a>
   </div>
 </li>

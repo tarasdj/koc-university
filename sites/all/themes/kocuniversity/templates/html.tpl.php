@@ -14,6 +14,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Magnific Popup core CSS file -->
 <link rel="stylesheet" href="/sites/all/libraries/magnific-popup/dist/magnific-popup.css"> 
 
@@ -27,10 +28,11 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
-  <?php if ($default_mobile_metatags): ?>
+  <?php if ($default_mobile_metatags): ?>    
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width">
+
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
 
