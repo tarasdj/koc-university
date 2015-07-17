@@ -78,7 +78,7 @@
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
-
+      <?php print render($page['across']); ?>
       <?php print render($page['navigation']); ?>
 
     </div>

@@ -54,10 +54,16 @@ Drupal.behaviors.my_custom_behavior = {
 
     if ( $("#block-custom-search-blocks-1").is(":visible") ) {
       $('#block-system-main-menu').fadeIn(500);
-      $('#block-custom-search-blocks-1').hide();   
+      $('#block-custom-search-blocks-1').hide(); 
+      $('#hide_show_search_button .fa-bars').addClass('fa-search');
+      $('#hide_show_search_button .fa-search').removeClass('fa-bars');  
+      $('#block-university-search-button').css("background-color", "#990000");
     } else { 
       $('#block-system-main-menu').hide();
       $('#block-custom-search-blocks-1').fadeIn(500);
+      $('#hide_show_search_button .fa-search').addClass('fa-bars');
+      $('#hide_show_search_button .fa-bars').removeClass('fa-search');
+      $('#block-university-search-button').css("background-color", "#790A10");
     };
   })
   //*******************************
